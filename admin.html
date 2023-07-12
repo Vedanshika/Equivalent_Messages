@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>Welcome, Admin!</h1>
+    <div class="message-container">
+        <div class="message-column">
+            <h3>MT Messages</h3>
+            <input type="file" id="mt-file-upload">
+            <button onclick="saveMTFile()">Save</button>
+        </div>
+        <div class="message-column">
+            <h3>Equivalent MX Messages</h3>
+            <input type="file" id="mx-file-upload">
+            <button onclick="saveMXFile()">Save</button>
+        </div>
+    </div>
+
+    <script>
+        function saveMTFile() {
+            const fileInput = document.getElementById('mt-file-upload');
+            const file = fileInput.files[0];
+
+            const formData = new FormData();
+            formData.append('mtFile', file);
+
+            fetch('/upload-mt', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                fileInput.value = ''; // Clear the file input
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        function saveMXFile() {
+            const fileInput = document.getElementById('mx-file-upload');
+            const file = fileInput.files[0];
+
+            const formData = new FormData();
+            formData.append('mxFile', file);
+
+            fetch('/upload-mx', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                fileInput.value = ''; // Clear the file input
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
