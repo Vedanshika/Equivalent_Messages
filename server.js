@@ -7,6 +7,7 @@ const upload = multer({ dest: path.join(__dirname, 'uploads') });
 
 // Set up static file serving
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Admin page route
 app.get('/admin', (req, res) => {
