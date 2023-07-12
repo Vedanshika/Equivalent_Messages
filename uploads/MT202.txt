@@ -1,0 +1,22 @@
+{1:F01BANKDEFFAXXX0000000000}{2:I202BANKDEFFXXXXN}{3:{108:MT202 1234567890}}{4:
+:20:ABCDEFGHIJKLMNO1234        --> Sender's Unique Transaction Reference Number
+:21:ABCDEFGHIJKLMNO5678        --> Related Reference
+:32A:210707USD1234567,89       --> Value Date, Currency, and Amount
+:52A:/12345678901234567890     --> Ordering Institution (Swift BIC)
+BANKDEFFXXXX
+:53A:/12345678901234567890     --> Sender's Correspondent (Swift BIC)
+BANKDEFFXXXX
+:54A:/BANKDEFFXXXX              --> Receiver's Correspondent (Swift BIC)
+BANKDEFFXXXX
+:56A:/BANKDEFFXXXX              --> Intermediary (Swift BIC)
+BANKDEFFXXXX
+:57A:/12345678901234567890      --> Account With Institution (Swift BIC)
+JOHN SMITH COMPANY LIMITED
+456 PARK AVENUE
+ANYCITY
+:58A:/BANKDEFFXXXX              --> Beneficiary's Institution (Swift BIC)
+BANKDEFFXXXX
+:70:REMITTANCE INFORMATION      --> Remittance Information
+:71A:OUR                        --> Charges
+:71F:/BANKDEFFXXXX              --> Senders To Receiver Information
+-}

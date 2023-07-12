@@ -1,0 +1,20 @@
+{1:F01BANKDEFFAXXX0000000000}{2:I103BANKDEFFXXXXN}{3:{103:MT103 1234567890}}{4:
+:20:ABCDEFGHIJKLMNO1234        --> Sender's Unique Transaction Reference Number
+:23B:CRED                      --> Payment Type/Category
+:32A:210707USD1234567,89       --> Value Date, Currency, and Amount
+:33B:USD1234567,89             --> Currency and Amount (Instructed Amount)
+:50A:/12345678901234567890     --> Ordering Customer Account
+BANKDEFFXXXX
+:56A:/BANKDEFFXXXX              --> Intermediary Bank (Swift BIC)
+BANKDEFFXXXX
+:57A:/12345678901234567890      --> Account With Institution (Swift BIC)
+JOHN SMITH COMPANY LIMITED
+456 PARK AVENUE
+ANYCITY
+:59:/12345678901234567890       --> Beneficiary Customer Account
+JOHN SMITH COMPANY LIMITED
+123 PARK AVENUE
+ANYCITY
+:70:REMITTANCE INFORMATION      --> Remittance Information
+:71A:OUR                        --> Charges
+-}{5:{CHK:123456789ABC}}

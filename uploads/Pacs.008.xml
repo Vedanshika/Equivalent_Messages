@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.09" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <!-- Group Header information -->
+      <MsgId>ABCDEFGHIJKLMNO1234</MsgId>
+      <CreDtTm>2022-07-07T10:30:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>1234567.89</CtrlSum>
+      <InitgPty>
+        <!-- Initiating Party information -->
+        <Nm>Initiating Company</Nm>
+      </InitgPty>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId>
+        <!-- Payment Identification -->
+        <InstrId>ABC123</InstrId>
+        <EndToEndId>ABC123</EndToEndId>
+      </PmtId>
+      <Amt>
+        <!-- Transaction Amount -->
+        <InstdAmt Ccy="USD">1234567.89</InstdAmt>
+      </Amt>
+      <Cdtr>
+        <Nm>John Smith Company Limited</Nm>
+        <PstlAdr>
+          <!-- Creditor's Postal Address -->
+          <StrtNm>123 Park Avenue</StrtNm>
+          <TwnNm>AnyCity</TwnNm>
+        </PstlAdr>
+      </Cdtr>
+      <CdtrAcct>
+        <!-- Creditor's Account -->
+        <Id>
+          <Othr>
+            <Id>12345678901234567890</Id>
+          </Othr>
+        </Id>
+      </CdtrAcct>
+      <CdtrAgt>
+        <FinInstnId>
+          <!-- Creditor's Agent information -->
+          <BIC>BANKDEFFXXXX</BIC>
+        </FinInstnId>
+      </CdtrAgt>
+      <Dbtr>
+        <Nm>John Doe Company Limited</Nm>
+        <PstlAdr>
+          <!-- Debtor's Postal Address -->
+          <StrtNm>456 Main Street</StrtNm>
+          <TwnNm>AnyCity</TwnNm>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <!-- Debtor's Account -->
+        <Id>
+          <Othr>
+            <Id>98765432109876543210</Id>
+          </Othr>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <!-- Debtor's Agent information -->
+          <BIC>BANKABCDXXXX</BIC>
+        </FinInstnId>
+      </DbtrAgt>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>
